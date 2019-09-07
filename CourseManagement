@@ -1,0 +1,67 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("WELCOME TO COURSE MANAGEMENT!");
+            Console.WriteLine("Please choose action!");
+            Console.WriteLine("1" + "-Add Group");
+            Console.WriteLine("2" + "-Delete Group");
+            Console.WriteLine("3" + "-Add Teacher");
+            Console.WriteLine("4" + "-Delete Teacher");
+            Console.WriteLine("5" + "-Add Student");
+            Console.WriteLine("6" + "-Delete Student");
+            var choose = Console.ReadLine();
+                        List<string> Groups = new List<string>() { "p506", "p507", "p508" };
+            Groups.Add("p509");
+            List<string> Teachers = new List<string>() { "Ismayil Ismayilov", "Aflatun Huseynov", "Knyaz Yagubov" };
+            Teachers.Add("Orxan Mammadov");
+            List<string> Students1 = new List<string>() {"Nurlan Huseynov", "Ulvi Ibrahimov", "Ali Askarov","Bashir Naghiyev" };
+
+            if (choose == "1")
+            {
+                Console.WriteLine("-Add Group Name-");
+                var newGroup = Console.ReadLine();
+                Groups.Add(newGroup);
+            }
+            else if (choose == "2")
+            {
+                Console.WriteLine("-Delete Group Name-");
+                var deletedGroup = Console.ReadLine();
+                Groups.Remove(deletedGroup);
+                {
+                    Console.WriteLine("Add Teacher");
+                    var newTeacher = Console.ReadLine();
+                    Teachers.Add(newTeacher);
+
+                }
+            }
+            else if (choose == "4")
+            {
+                Console.WriteLine("Delete Teacher");
+                var deletedTeacher = Console.ReadLine();
+                Teachers.Remove(deletedTeacher);
+            }
+            else if (choose == "5")
+            {
+                Console.WriteLine("Add Student");
+                var newStudent = Console.ReadLine();
+                Students1.Add(newStudent);
+            }
+            else if (choose == "6")
+            {
+                Console.WriteLine("Delete Student");
+                var deletedStudent = Console.ReadLine();
+                Students1.Remove(deletedStudent);
+            }
+
+        }
+    }
+}
